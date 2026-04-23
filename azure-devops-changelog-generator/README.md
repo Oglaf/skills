@@ -11,7 +11,7 @@ An AI-powered skill that generates structured release documentation from Azure D
 Install directly from GitHub:
 
 ```powershell
-npx skills install github:Oglaf/skills/skills/azure-devops-changelog-generator
+npx skills install github:Oglaf/skills/azure-devops-changelog-generator
 ```
 
 ## Overview
@@ -85,7 +85,7 @@ User Input (TFVC/Git commits)
 Install directly from GitHub with `npx skills`:
 
 ```powershell
-npx skills install github:Oglaf/skills/skills/azure-devops-changelog-generator
+npx skills install github:Oglaf/skills/azure-devops-changelog-generator
 ```
 
 ## Project Structure

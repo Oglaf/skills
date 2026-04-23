@@ -14,7 +14,7 @@ A collection of custom GitHub Copilot skills focused on practical engineering wo
 Install any skill directly from GitHub:
 
 ```powershell
-npx skills install github:Oglaf/skills/skills/<skill-folder>
+npx skills install github:Oglaf/skills/<skill-folder>
 ```
 
 Replace `<skill-folder>` with the desired skill, e.g. `angular-runtime-env-vars` or `azure-devops-changelog-generator`.
@@ -84,8 +84,8 @@ The most complete example is `azure-devops-changelog-generator`, which uses a st
 ### Install a Skill from GitHub
 
 ```powershell
-npx skills install github:Oglaf/skills/skills/angular-runtime-env-vars
-npx skills install github:Oglaf/skills/skills/azure-devops-changelog-generator
+npx skills install github:Oglaf/skills/angular-runtime-env-vars
+npx skills install github:Oglaf/skills/azure-devops-changelog-generator
 ```
 
 ### Explore a Skill

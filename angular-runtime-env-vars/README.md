@@ -7,7 +7,7 @@ Use this skill to make Angular prerender or static deployments read environment 
 Install directly from GitHub:
 
 ```powershell
-npx skills install github:Oglaf/skills/skills/angular-runtime-env-vars
+npx skills install github:Oglaf/skills/angular-runtime-env-vars
 ```
 
 ## Overview
@@ -138,7 +138,7 @@ This skill currently includes prompt/eval definitions only; there is no dedicate
 Install directly from GitHub with:
 
 ```powershell
-npx skills install github:Oglaf/skills/skills/angular-runtime-env-vars
+npx skills install github:Oglaf/skills/angular-runtime-env-vars
 ```
 
 ## Author
