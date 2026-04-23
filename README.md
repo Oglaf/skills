@@ -9,6 +9,16 @@
 
 A collection of custom GitHub Copilot skills focused on practical engineering workflows. Each top-level folder is a self-contained skill package with its own `SKILL.md`, evaluation scenarios, and any supporting scripts or docs needed by that skill.
 
+## Quick Start
+
+Install any skill directly from GitHub:
+
+```powershell
+npx skills install github:Oglaf/skills/skills/<skill-folder>
+```
+
+Replace `<skill-folder>` with the desired skill, e.g. `angular-runtime-env-vars` or `azure-devops-changelog-generator`.
+
 ## Included Skills
 
 | Skill | Purpose | Implementation |

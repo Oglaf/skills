@@ -6,6 +6,14 @@
 
 An AI-powered skill that generates structured release documentation from Azure DevOps TFVC changesets or Git commits by retrieving associated work items and analyzing their full context.
 
+## Quick Start
+
+Install directly from GitHub:
+
+```powershell
+npx skills install github:Oglaf/skills/skills/azure-devops-changelog-generator
+```
+
 ## Overview
 
 This skill extracts work item IDs from commit messages, queries the Azure DevOps REST API to fetch work item details including titles, descriptions, and discussion comments, and generates two output files:

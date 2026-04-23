@@ -2,6 +2,14 @@
 
 Use this skill to make Angular prerender or static deployments read environment values at runtime instead of baking them in at build time, with a focus on Azure App Service deployments.
 
+## Quick Start
+
+Install directly from GitHub:
+
+```powershell
+npx skills install github:Oglaf/skills/skills/angular-runtime-env-vars
+```
+
 ## Overview
 
 This skill helps diagnose and fix the common runtime-config problems behind stale frontend environment values:
