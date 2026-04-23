@@ -1,0 +1,41 @@
+{
+  "skill_name": "angular-runtime-env-vars",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our Angular prerender app on Azure App Service keeps calling the old API host after I change API_URL in App Settings. Diagnose and fix it in code, then tell me what to verify in Azure.",
+      "expected_output": "Implements runtime injection that updates apiUrl on each startup, addresses runtime-config caching risk, and provides concrete Azure validation steps.",
+      "files": [],
+      "expectations": [
+        "Identifies runtime-config.js + server startup injection as the runtime boundary",
+        "Fix avoids placeholder-only replacement and updates current apiUrl value",
+        "Mentions no-cache handling for runtime-config.js",
+        "Provides Azure checks for startup command, env var key, and restart behavior"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need to support API_URL, AUTH_URL, and FEATURE_FLAG_X in Angular without rebuilding between environments. Implement a generic runtime env var pattern and document it.",
+      "expected_output": "Provides a scalable runtime config mapping pattern for multiple variables, wires Angular consumption safely, and updates docs to match real behavior.",
+      "files": [],
+      "expectations": [
+        "Design supports multiple env vars via runtime config object",
+        "Frontend reads values from runtime global object",
+        "Server-side injection maps process.env values into runtime config",
+        "Documentation reflects runtime (not build-time-only) variable flow"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Given this startup command fallback chain (wwwroot -> drop-staging -> drop-production), ensure the app always injects env vars into the actual served runtime-config.js and explain how to confirm in Kudu logs.",
+      "expected_output": "Handles path resolution and startup fallback concerns, ensures injection targets served path, and gives practical Kudu log verification guidance.",
+      "files": [],
+      "expectations": [
+        "Addresses resolved dist path and not just assumed default path",
+        "Includes actionable log statements for resolved path and injection status",
+        "Explains how startup fallback can hide wrong server.js being used",
+        "Provides Kudu log checks tied to actual runtime-config target"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "skill_name": "azure-devops-changelog-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Given the following TFVC changesets (plain text) and using Azure DevOps organization https://dev.azure.com/mycompany with $DEVOPS_PAT available in PowerShell, generate cards.md and changelog.md as specified in the skill. Changesets:\n\n4575 Developer Name 11490 - Description of changes\n\nProduce cards.md with an entry for work item 11490 including a one-sentence summary and changelog.md under ProjectName -> Bug Fixes with the changelog item formatted as specified.",
+      "expected_output": "cards.md containing ## 11490 – {Title} ({Work Item Type}) with State, Assigned to, Link, and short summary; changelog.md with ProjectName -> Bug Fixes listing - **11490** – {Title} and one-sentence summary.",
+      "files": [],
+      "expectations": [
+        "cards.md is created in the output directory",
+        "cards.md contains a heading '## 11490'",
+        "changelog.md contains 'ProjectName' section and a line '- **11490**' under it"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Given these TFVC changesets referencing multiple IDs, generate cards.md and changelog.md grouped by project.\n\n4565 Developer Name BUGS 9761, 11118, 11149\n4567 Developer Name User Story 9975: Feature description\n\nUse the DevOps API to enrich work item details. Expect cards.md entries for 9761, 11118, 11149, 9975 and changelog.md split by project with appropriate sections (Bug Fixes / New Features).",
+      "expected_output": "cards.md with four entries enriched from DevOps API; changelog.md grouping by project showing bug fixes for 9761, 11118, 11149 and New Features for 9975, each with one-sentence impact statements.",
+      "files": [],
+      "expectations": [
+        "cards.md contains headings '## 9761','## 11118','## 11149','## 9975'",
+        "changelog.md groups items by project name",
+        "Each listed work item appears once in cards.md and once in changelog.md"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Edge cases: deduplication and odd ID formats.\n\n10086: Developer Name 10086: Description\n4578 Developer Name 10086\n\nOnly include each work item once. Generate cards.md and changelog.md; ensure duplicates are deduplicated and summaries derive from discussion/history when titles are ambiguous.",
+      "expected_output": "cards.md contains a single entry for 10086 with deduplicated metadata and a concise summary; changelog.md lists 10086 once in the appropriate project/category.",
+      "files": [],
+      "expectations": [
+        "cards.md contains a single '## 10086' entry (deduplicated)",
+        "changelog.md lists 10086 exactly once",
+        "No duplicate card entries are present for ID 10086"
+      ]
+    }
+  ]
+}
