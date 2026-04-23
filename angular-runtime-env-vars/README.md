@@ -127,10 +127,10 @@ This skill currently includes prompt/eval definitions only; there is no dedicate
 
 ## Installation
 
-Install from this workspace with:
+Install directly from GitHub with:
 
 ```powershell
-npx skills install .\skills\angular-runtime-env-vars
+npx skills install github:Oglaf/skills/skills/angular-runtime-env-vars
 ```
 
 ## Author

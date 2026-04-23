@@ -71,11 +71,11 @@ The most complete example is `azure-devops-changelog-generator`, which uses a st
 - PowerShell for Windows-oriented examples
 - Python 3 if you want to run the Azure DevOps grader
 
-### Install a Skill Locally
+### Install a Skill from GitHub
 
 ```powershell
-npx skills install .\skills\angular-runtime-env-vars
-npx skills install .\skills\azure-devops-changelog-generator
+npx skills install github:Oglaf/skills/skills/angular-runtime-env-vars
+npx skills install github:Oglaf/skills/skills/azure-devops-changelog-generator
 ```
 
 ### Explore a Skill

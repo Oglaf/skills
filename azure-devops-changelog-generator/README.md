@@ -74,14 +74,10 @@ User Input (TFVC/Git commits)
 
 ## Installation
 
-Install the skill locally using `npx skills`:
+Install directly from GitHub with `npx skills`:
 
 ```powershell
-# Install from local path
-npx skills install ./skills/azure-devops-changelog-generator
-
-# Install from GitHub
-npx skills install github:Oglaf/azure-devops-changelog-generator
+npx skills install github:Oglaf/skills/skills/azure-devops-changelog-generator
 ```
 
 ## Project Structure
