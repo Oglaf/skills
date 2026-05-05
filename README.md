@@ -25,6 +25,7 @@ Replace `<skill-folder>` with the desired skill, e.g. `angular-runtime-env-vars`
 | --- | --- | --- |
 | `angular-runtime-env-vars` | Fix and document runtime environment variable loading for Angular prerender/static apps, especially on Azure App Service | `SKILL.md` + `evals\evals.json` |
 | `azure-devops-changelog-generator` | Generate `cards.md` and `changelog.md` from TFVC changesets or Git commits by enriching them with Azure DevOps work items | `SKILL.md` + PowerShell scripts + Python grader |
+| `azure-devops-pr-review` | Multi-model code review for Azure DevOps pull requests. Runs parallel specialist + general AI agents, filters by confidence score, posts inline comments, and tags PRs as AI-reviewed. | `SKILL.md` |
 
 ## Repository Structure
 
@@ -37,16 +38,19 @@ skills/
 │   ├── SKILL.md
 │   └── evals/
 │       └── evals.json
-└── azure-devops-changelog-generator/
+├── azure-devops-changelog-generator/
+│   ├── README.md
+│   ├── SKILL.md
+│   ├── evals/
+│   │   ├── evals.json
+│   │   └── grader.py
+│   └── scripts/
+│       ├── fetch-workitems.ps1
+│       ├── generate-cards.ps1
+│       └── generate-changelog.ps1
+└── azure-devops-pr-review/
     ├── README.md
-    ├── SKILL.md
-    ├── evals/
-    │   ├── evals.json
-    │   └── grader.py
-    └── scripts/
-        ├── fetch-workitems.ps1
-        ├── generate-cards.ps1
-        └── generate-changelog.ps1
+    └── SKILL.md
 ```
 
 ## Architecture
@@ -86,6 +90,7 @@ The most complete example is `azure-devops-changelog-generator`, which uses a st
 ```powershell
 npx skills install github:Oglaf/skills/angular-runtime-env-vars
 npx skills install github:Oglaf/skills/azure-devops-changelog-generator
+npx skills install github:Oglaf/skills/azure-devops-pr-review
 ```
 
 ### Explore a Skill
@@ -129,6 +134,7 @@ This skill currently uses declarative eval scenarios in `evals\evals.json` and d
 
 - `angular-runtime-env-vars\README.md`
 - `azure-devops-changelog-generator\README.md`
+- `azure-devops-pr-review\README.md`
 - `AGENTS.md`
 
 ## Author
